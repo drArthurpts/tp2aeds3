@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>File Compressor</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' href='styles.css'>
+	
+	<script src='script.js' type="text/javascript"></script>
+</head>
+
+
+<body>
+	<h1  id="heading">COMPRIMA OU DESCOMPRIMA SEU ARQUIVO EM TRÊS ETAPAS FÁCEIS!! </h1>
+	<div class="bigdiv">
+		<h2 class="align">PASSO 1: CARREGUE SEU ARQUIVO</h2>
+		<div class="align" id="step1">
+			<img src="assets/text_file_icon1.png"  id="textImg">
+			<br>
+			<form method="post" enctype="multipart/form-data" class="form" id="fileform">
+				<input type="file" id="uploadfile"  class="input">
+
+				
+				<input type="button" id="submitbtn"  class="input" value="Submit">
+			</form>
+			<span id="text1">(somente arquivos .txt)</span>
+			<br>
+		</div>
+		<h2 class="align">PASSO 2: SELECIONE AÇÃO</h2>
+		<div class="align" id="step2">
+			
+			<img src="assets/options_icon2.png" id="optionsImg">
+			<br>
+			<button type="button" id="encode" class="button" >Comprimir</button>
+			Ou &nbsp;
+			
+			<button type="button" id="decode" class="button" >Descomprimir</button>
+			
+			<br>
+		</div>
+		<h2 class="align" >PASSO 3: SENTAR E RELAXAR</h2>
+		<div class="align" id="step3" >
+			<img src="assets/wait_icon1.png" id="waitImg">
+			<br>
+			
+		</div>
+		<br>
+		<span class="align" id="text4">
+			<button type="button" onclick="location.reload()" >Clique aqui</button> para começar de novo! 
+		</span>
+	</div>
+	<span class="text">
+		Quer saber mais sobre a técnica de compressão utilizada por esta ferramenta?
+		<a href="info.html"	class="links" id="link1" target="_blank">ClIQUE AQUI!</a>
+		<p><b>TRABALHO FEITO POR: ARTHUR ABREU P. DE SOUSA, KAIQUE XAVIER E MAICON DOUGLAS</b></p>
+	</span>
+
+</body>
+
+</html>

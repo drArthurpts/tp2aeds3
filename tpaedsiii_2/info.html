@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Info</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="index.html" class="links"> Voltar </a>
+    <h2>Essa ferramenta usa codificação Huffman para compactar dados! </h2>
+    <ul>
+        <li><b>Codificação Huffman</b>  é uma técnica popular usada para <b>Compressão de dados sem perdas</b>.</li>
+        <li><h3>Compressão sem perdas:</h3></li>
+        <li><b>Compressão sem perdas</b> é uma classe de algoritmos de compressão de dados que permite que os dados originais sejam
+            perfeitamente reconstruído a partir dos dados compactados. Por contraste,<b>compressão com perda</b> permitem
+            reconstrução apenas de uma aproximação dos dados originais, embora geralmente com grande melhoria
+            taxas de compactação (e, portanto, tamanhos de mídia reduzidos).</li>
+        <li>A compactação sem perdas é preferida para compactação de arquivos de texto, enquanto a compactação com perdas geralmente é preferida para arquivos de áudio, vídeo e imagem.</li>
+        <li>Formatos de arquivo como <b>ZIP</b> usam compactação sem perdas, enquanto formatos como <b>MP3</b> e <b>JPEG</b> usam
+            Compressão com perdas</li>
+      <li><b>Taxa de compactação de dados</b> , também conhecida como potência de compactação, é uma medida da redução relativa
+            no tamanho da representação de dados produzida por um algoritmo de compactação de dados. Geralmente é expresso como o
+            divisão do tamanho não compactado pelo tamanho compactado. Assim, uma representação que comprime o armazenamento de um arquivo
+            tamanho de 10 MB a 2 MB tem uma taxa de compactação de 10/2 = 5
+        </li>
+        <li>
+            <h3>Código Huffman:</h3>
+        </li>
+        <li>
+            Um <b>código Huffman</b> é um tipo específico de código de prefixo ideal comumente usado para dados sem perdas.
+            compressão. O processo de encontrar ou usar tal código ocorre por meio da codificação de Huffman, um algoritmo
+            desenvolvido por David A. Huffman.
+        </li>
+        <li>
+            A saída do algoritmo de Huffman pode ser vista como uma <b>tabela de códigos de comprimento variável</b>
+para codificar um símbolo de origem (como um caractere em um arquivo). O algoritmo deriva esta tabela do
+            probabilidade estimada ou frequência de ocorrência (peso) para cada valor possível do símbolo de origem.
+        </li>
+        <li><b>Códigos de prefixo</b>, significa que os códigos (sequências de bits) são atribuídos de tal forma que o código atribuído a
+            um caractere não é o prefixo do código atribuído a qualquer outro caractere. É assim que a Huffman Coding faz
+certifique-se de que não haja <b>ambigüidade</b> ao decodificar o fluxo de bits gerado.
+        </li>
+        <li><h3>Compressão:</h3></li>
+        <li>Existem basicamente duas partes principais na codificação Huffman
+            <ol>
+                <li> Construa uma <b>Árvore Huffman</b> a partir dos caracteres de entrada.</li>
+                <li>Atravesse a Árvore Huffman e atribua códigos aos personagens.
+                </li>
+            </ol>
+        </li>
+        <li>
+            <b>Etapas para construir a Árvore Huffman</b>
+<br>
+            A entrada é um <b>Array ou Hashmap</b> de caracteres únicos junto com sua frequência de ocorrências e
+            a saída é Huffman
+            Árvore.
+            <ol>
+                <li>Crie um nó folha para cada caractere exclusivo e construa <b>um heap mínimo (ou uma fila de prioridade)</b> de todos os nós folha </li>
+                <li>Extraia dois nós com a frequência mínima do heap mínimo.</li>
+<li>Crie um novo nó interno com frequência igual à soma das frequências dos dois nós. Faça o
+                    primeiro nó extraído como seu filho esquerdo e o outro nó extraído como seu filho direito. Adicione isso
+                    nó para o heap mínimo.</li>
+                <li>Repita as etapas 2 e 3 até que o heap contenha apenas um nó. O nó restante é o nó raiz e
+                    a árvore está completa.</li>
+            </ol>
+        </li>
+        <li>
+<b>Etapas para imprimir códigos da Huffman Tree:</b>
+            <br>
+            Percorra a árvore formada a partir da raiz. Mantenha uma matriz auxiliar. Enquanto se move para a esquerda
+            filho, escreva 0 no array. Ao passar para o filho certo, escreva 1 no array. Imprima a matriz quando um
+            nó folha é encontrado.
+        </li>
+        <li><h3>Descompactação:</h3></li>
+<li>De modo geral, o processo de descompressão é simplesmente uma questão de traduzir o fluxo de códigos de prefixo para valores de bytes individuais, geralmente percorrendo a árvore de Huffman nó por nó à medida que cada bit é lido do fluxo de entrada (alcançando necessariamente um nó folha encerra a busca por esse valor de byte específico). </li>
+    </ul>
+    <h2>Referências:</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Huffman_coding" target="_blank">Codificação Wikipédia/huffman</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Lossless_compression" target="_blank">Wikipedia/compressão sem perdas</a></li>
+        <li><a href="https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/" target="_blank">Codificação Geeksforgeeks/huffman</a></li>
+    </ul>
+</body>
+
+</html>
