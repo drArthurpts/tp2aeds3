@@ -1,4 +1,4 @@
-
+link do trabalho: https://tp2-aeds3-39f0ce.netlify.app/
 # Aplicativo da Web do compressor de arquivo de texto
 
 *Usa codificação Huffman para compactação de texto
